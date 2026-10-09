@@ -1,0 +1,61 @@
+.magnetic-page { --accent:#ffd08a; background:#10151d; }
+.magnetic-hero {
+  position:relative; isolation:isolate; overflow:hidden; min-height:100svh;
+  display:flex; align-items:center;
+  padding:150px max(24px,calc((100vw - 1160px)/2)) 100px;
+  background:linear-gradient(90deg,rgba(10,17,25,.95),rgba(10,17,25,.5) 58%,rgba(10,17,25,.15)),url("../assets/magnetic-hills.jpg") center/cover;
+}
+.magnetic-copy { max-width:720px; z-index:2; }
+.magnetic-copy h1 { font-size:clamp(4rem,9vw,8rem); line-height:.9; }
+.magnetic-copy h1 i { color:var(--accent); font-style:normal; }
+.magnetic-copy p { max-width:520px; font-size:18px; }
+.magnetic-button { background:var(--accent); color:#24180a; }
+.mountain-sun {
+  position:absolute; z-index:-1; width:220px; height:220px; border-radius:50%;
+  right:18%; top:20%; background:radial-gradient(circle,#ffe6b5,rgba(255,208,138,.08) 65%,transparent 70%);
+}
+.mountain-layer { position:absolute; z-index:-1; left:-10%; right:-10%; bottom:-1px; height:35%; clip-path:polygon(0 80%,18% 30%,31% 65%,47% 10%,61% 61%,78% 22%,100% 77%,100% 100%,0 100%); }
+.mountain-back { background:#28333a; opacity:.75; transform:translateY(-70px) scale(1.05); }
+.mountain-front { background:linear-gradient(120deg,#121c25,#46515a); opacity:.75; }
+.road-label { position:absolute; right:25px; bottom:30px; font-size:10px; letter-spacing:2px; }
+.magnetic-scroll { background:#0c121a; }
+.magnetic-sticky {
+  display:grid; grid-template-columns:1fr 1fr; gap:65px; align-items:center;
+  min-height:100vh;
+}
+.magnetic-scroll-visual {
+  position:relative; height:470px; overflow:hidden; border-radius:28px;
+  background:linear-gradient(155deg,#3c4b52,#131d26 60%,#080e15);
+  border:1px solid rgba(255,255,255,.13);
+}
+.magnetic-scroll-visual::before {
+  content:""; position:absolute; left:-10%; right:-10%; top:0; height:60%;
+  background:linear-gradient(140deg,#59656a,#1a2933);
+  clip-path:polygon(0 100%,22% 25%,43% 80%,65% 12%,100% 75%,100% 100%);
+}
+.fake-road {
+  position:absolute; left:30%; top:35%; width:44%; height:100%;
+  background:linear-gradient(90deg,#1a1d1e,#626361 50%,#242729);
+  clip-path:polygon(40% 0,58% 0,100% 100%,0 100%);
+  transform:rotate(-9deg); transform-origin:top;
+}
+.road-car { position:absolute; left:51%; top:43%; font-size:38px; filter:drop-shadow(0 10px 10px #000); transition:top .6s ease; }
+.road-mark { position:absolute; bottom:20px; left:22px; font-size:9px; letter-spacing:2px; color:var(--accent); }
+.magnetic-scroll-copy { position:relative; min-height:400px; display:flex; flex-direction:column; justify-content:center; }
+.magnetic-chapter { opacity:.28; transition:opacity .4s ease; margin:20px 0; }
+.magnetic-chapter.active { opacity:1; }
+.magnetic-chapter > span { font-size:10px; color:var(--accent); letter-spacing:2px; }
+.magnetic-chapter h2 { font-size:clamp(2rem,4vw,3.3rem); margin:12px 0; }
+.magnetic-chapter p { max-width:500px; }
+.magnetic-facts .fact-number { color:var(--accent); }
+.magnetic-outro { text-align:center; padding:100px 20px; background:radial-gradient(ellipse at 50% 100%,rgba(255,208,138,.13),transparent 65%); }
+.magnetic-outro h2 { margin:22px 0 32px; }
+@media(max-width:760px) {
+  .magnetic-hero { min-height:850px; }
+  .magnetic-copy h1 { font-size:clamp(4rem,17vw,6rem); }
+  .magnetic-copy p { font-size:15px; }
+  .magnetic-sticky { grid-template-columns:1fr; gap:25px; }
+  .magnetic-scroll-visual { height:330px; }
+  .magnetic-scroll-copy { min-height:unset; }
+  .magnetic-chapter { opacity:.55; }
+}
