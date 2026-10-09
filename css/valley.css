@@ -1,0 +1,109 @@
+.valley-page {
+  --accent: #c8ee91;
+  --bg: #111b13;
+  background: #111b13;
+}
+
+.valley-hero {
+  min-height: 100svh;
+  padding: 145px max(24px, calc((100vw - 1160px)/2)) 70px;
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 55px;
+  align-items: center;
+  position: relative;
+}
+
+.valley-hero-copy h1 { font-size: clamp(4rem,7vw,7rem); }
+.valley-hero-copy h1 i { color: var(--accent); font-style: normal; }
+.valley-hero-copy p { max-width: 450px; font-size: 18px; }
+.valley-button { background: var(--accent); }
+
+.valley-hero-photo {
+  height: min(660px,70vh);
+  min-height: 400px;
+  position: relative;
+  border-radius: 180px 180px 24px 24px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.2);
+}
+
+.valley-hero-photo img,
+.valley-large-image img {
+  width: 100%; height: 100%; object-fit: cover;
+}
+
+.valley-hero-photo::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(0deg,rgba(0,0,0,.55),transparent 45%);
+}
+
+.image-stamp {
+  position: absolute; z-index: 1; top: 25px; left: 25px;
+  padding: 13px; border: 1px solid rgba(255,255,255,.4);
+  border-radius: 50%; font-size: 10px; text-align: center;
+  background: rgba(12,26,16,.4); backdrop-filter: blur(8px);
+}
+
+.photo-credit {
+  position: absolute; z-index: 1; bottom: 22px; left: 24px;
+  font-size: 10px; letter-spacing: 2px;
+}
+
+.valley-side-note {
+  position: absolute; left: 18px; bottom: 90px;
+  writing-mode: vertical-rl; font-size: 9px; letter-spacing: 2px;
+  color: #84977f;
+}
+
+.valley-facts { gap: 12px; }
+.botanical-note {
+  padding: 27px; border-top: 1px solid #587052;
+  background: rgba(255,255,255,.025);
+}
+.botanical-note > span,
+.flower-specimen span {
+  color: var(--accent); font-size: 9px; letter-spacing: 1.5px; font-weight: 800;
+}
+.botanical-note h3 { margin-top: 24px; }
+
+.flower-atlas {
+  background: #dce7c9; color: #243625;
+  overflow: hidden;
+}
+.flower-atlas p { color: #586852; }
+.flower-atlas .eyebrow { color: #56733f; }
+.flower-atlas .section-heading { max-width: 700px; }
+.flower-track {
+  display: flex; gap: 20px; overflow-x: auto;
+  padding: 8px 0 24px; scroll-snap-type: x mandatory;
+  scrollbar-color: #778b67 transparent;
+}
+.flower-specimen {
+  flex: 0 0 290px; scroll-snap-align: start;
+  background: #f4f5e9; border: 1px solid #c6d2b5;
+  border-radius: 20px; overflow: hidden;
+}
+.flower-specimen img { width: 100%; height: 280px; object-fit: cover; }
+.flower-specimen > div { padding: 20px; }
+.flower-specimen h3 { margin: 8px 0; }
+.flower-specimen span { color: #597a41; }
+
+.atlas-controls {
+  display: flex; justify-content: space-between; align-items: center;
+  gap: 20px; font-size: 10px; letter-spacing: 1.5px;
+}
+.atlas-controls button {
+  width: 42px; height: 42px; margin-left: 8px;
+  border: 1px solid #a8b89a; border-radius: 50%;
+  background: transparent; cursor: pointer;
+}
+.valley-large-image { height: 470px; overflow: hidden; border-radius: 22px; }
+
+@media(max-width:760px) {
+  .valley-hero { grid-template-columns: 1fr; padding-top: 145px; gap: 30px; }
+  .valley-hero-photo { min-height: 430px; height: 55vh; border-radius: 140px 140px 22px 22px; }
+  .valley-side-note { display: none; }
+  .valley-facts { grid-template-columns: 1fr; }
+  .valley-large-image { height: 320px; }
+}
