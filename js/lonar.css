@@ -1,0 +1,38 @@
+.lonar-page { --accent:#c2e49a; background:#101613; }
+.lonar-hero {
+  min-height:100svh; position:relative; isolation:isolate; overflow:hidden;
+  display:grid; grid-template-columns:1fr 1fr; gap:50px; align-items:center;
+  padding:150px max(24px,calc((100vw - 1160px)/2)) 100px;
+  background:linear-gradient(135deg,#101613,#18251d 55%,#0a100d);
+}
+.lon ar-hero { overflow:hidden; }
+.lon ar-copy { position:relative; z-index:2; }
+.lon ar-copy h1 { font-size:clamp(4rem,8vw,7.5rem); }
+.lon ar-copy h1 i { font-style:normal; color:var(--accent); }
+.lon ar-copy p { max-width:500px; font-size:17px; }
+.lon ar-button { background:var(--accent); }
+.lon ar-hero-photo { position:relative; z-index:1; height:min(600px,65vh); min-height:380px; border-radius:50% 50% 20px 20px; overflow:hidden; border:1px solid rgba(255,255,255,.16); }
+.lon ar-hero-photo img { width:100%; height:100%; object-fit:cover; }
+.crater-rings { position:absolute; z-index:-1; width:650px; height:650px; right:20%; top:8%; border:1px solid rgba(194,228,154,.1); border-radius:50%; }
+.crater-rings span { position:absolute; border:1px solid rgba(194,228,154,.12); border-radius:50%; inset:10%; }
+.crater-rings span:nth-child(2) { inset:20%; }
+.crater-rings span:nth-child(3) { inset:30%; }
+.crater-rings span:nth-child(4) { inset:40%; }
+.lon ar-stamp { position:absolute; z-index:2; bottom:35px; right:35px; padding:16px; border:1px solid rgba(194,228,154,.5); background:#101613; font-size:9px; letter-spacing:2px; line-height:1.8; }
+.lon ar-stamp b { font-size:22px; color:var(--accent); }
+.geology-timeline { max-width:800px; border-left:1px solid rgba(194,228,154,.4); margin-left:12px; }
+.geology-event { display:grid; grid-template-columns:55px 1fr; gap:20px; padding:0 0 45px 25px; position:relative; }
+.geology-event::before { content:""; position:absolute; left:-5px; top:8px; width:9px; height:9px; border-radius:50%; background:var(--accent); box-shadow:0 0 20px rgba(194,228,154,.5); }
+.geology-event > span { color:var(--accent); font-weight:800; }
+.geology-event h3 { margin:0 0 10px; }
+.geology-event p { margin:0; }
+.lonar-data { background:#19241d; border-block:1px solid rgba(194,228,154,.15); }
+.lon ar-fact { padding:26px; border:1px solid rgba(194,228,154,.18); border-radius:20px; background:rgba(0,0,0,.12); }
+.lon ar-fact > span { color:var(--accent); font-size:10px; letter-spacing:2px; }
+.lon ar-fact h3 { margin-top:25px; }
+.lon ar-conservation h2 { font-size:clamp(2.5rem,5vw,4.5rem); }
+@media(max-width:760px) {
+  .lonar-hero { grid-template-columns:1fr; padding-top:145px; gap:25px; }
+  .lon ar-hero-photo { height:430px; }
+  .lon ar-stamp { bottom:20px; right:20px; }
+}
